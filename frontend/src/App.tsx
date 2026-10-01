@@ -1,0 +1,18 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { AppLayout } from '@/components/layout/AppLayout'
+import { Home } from '@/pages/Home'
+import { Shop } from '@/pages/Shop'
+import { Collections } from '@/pages/Collections'
+import { ProductDetails } from '@/pages/ProductDetails'
+import { Cart } from '@/pages/Cart'
+import { Checkout } from '@/pages/Checkout'
+import { Wishlist } from '@/pages/Wishlist'
+import { About } from '@/pages/About'
+import { Contact } from '@/pages/Contact'
+import { Auth } from '@/pages/Auth'
+import { ContentPage } from '@/pages/ContentPage'
+import { OrderSuccess } from '@/pages/OrderSuccess'
+import { NotFound } from '@/pages/NotFound'
+import { Account } from '@/pages/Account'
+
+export function App() { return <BrowserRouter><Routes><Route element={<AppLayout />}><Route index element={<Home />} /><Route path="shop" element={<Shop />} /><Route path="new-arrivals" element={<Shop mode="new" />} /><Route path="collections" element={<Collections />} /><Route path="product/:slug" element={<ProductDetails />} /><Route path="cart" element={<Cart />} /><Route path="checkout" element={<Checkout />} /><Route path="wishlist" element={<Wishlist />} /><Route path="about" element={<About />} /><Route path="contact" element={<Contact />} /><Route path="auth/login" element={<Auth />} /><Route path="auth/register" element={<Auth />} /><Route path="account" element={<Account />} /><Route path="faq" element={<ContentPage kind="faq" />} /><Route path="privacy" element={<ContentPage kind="privacy" />} /><Route path="terms" element={<ContentPage kind="terms" />} /><Route path="order-success" element={<OrderSuccess />} /><Route path="*" element={<NotFound />} /></Route></Routes></BrowserRouter> }

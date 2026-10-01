@@ -1,0 +1,1 @@
+export const endpoints = { products: '/products', product: (slug: string) => `/products/${slug}`, categories: '/categories', login: '/auth/login', register: '/auth/register', logout: '/auth/logout', me: '/auth/me', orders: '/orders', track: '/orders/track', contact: '/contact', newsletter: '/newsletter' } as const
